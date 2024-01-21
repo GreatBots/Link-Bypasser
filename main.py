@@ -1,6 +1,6 @@
 import pyrogram
 from pyrogram import Client,filters
-from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton, Message
 from os import environ, remove
 from threading import Thread
 from typing import Union
