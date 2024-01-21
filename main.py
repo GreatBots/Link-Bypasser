@@ -3,6 +3,7 @@ from pyrogram import Client,filters
 from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton
 from os import environ, remove
 from threading import Thread
+from typing import Union
 from json import load
 from re import search
 
