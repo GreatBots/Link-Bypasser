@@ -186,12 +186,12 @@ def receive(client: pyrogram.client.Client, message: pyrogram.types.messages_and
 
 # doc thread
 def docthread(message):
-    msg = app.send_message(message.chat.id, "🔎 __bypassing...__", reply_to_message_id=message.id)
+    msg = app.send_message(message.chat.id, "🔎 **bypassing...**", reply_to_message_id=message.id)
     print("sent DLC file")
     file = app.download_media(message)
     dlccont = open(file,"r").read()
     links = bypasser.getlinks(dlccont)
-    app.edit_message_text(message.chat.id, msg.id, f'__{links}__', disable_web_page_preview=True)
+    app.edit_message_text(message.chat.id, msg.id, f'**🔗 Link Generated:**\n\n**┎Direct Link: {links}\n┖Powered @Better_Botz**', disable_web_page_preview=True)
     remove(file)
 
 
