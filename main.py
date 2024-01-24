@@ -106,7 +106,7 @@ def loopthread(message,otherss=False):
         if "https://olamovies" in urls[0] or "https://psa.wf/" in urls[0]:
             msg = app.send_message(message.chat.id, "⏳ __this might take some time...__", reply_to_message_id=message.id)
         else:
-            msg = app.send_message(message.chat.id, "🔎 __bypassing...__", reply_to_message_id=message.id)
+            msg = app.send_message(message.chat.id, "🔎 **bypassing...**", reply_to_message_id=message.id)
 
     strt = time()
     links = ""
@@ -138,7 +138,7 @@ def loopthread(message,otherss=False):
 
     if otherss:
         try:
-            app.send_photo(message.chat.id, message.photo.file_id, f'__{links}__', reply_to_message_id=message.id)
+            app.send_photo(message.chat.id, message.photo.file_id, f'**🔗 Link Generated:**\n\n**┎Direct Link: {links}\n┖Powered @Better_Botz**', reply_to_message_id=message.id)
             app.delete_messages(message.chat.id,[msg.id])
             return
         except: pass
